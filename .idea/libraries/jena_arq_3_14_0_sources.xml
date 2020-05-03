@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="jena-arq-3.14.0-sources">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/Downloads/Setups/MSc/apache-jena-3.14.0/lib-src/jena-arq-3.14.0-sources.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/Setups/MSc/apache-jena-3.14.0/lib-src/jena-cmds-3.14.0-sources.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/Setups/MSc/apache-jena-3.14.0/lib-src/jena-core-3.14.0-sources.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/Setups/MSc/apache-jena-3.14.0/lib-src/jena-rdfconnection-3.14.0-sources.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/Setups/MSc/apache-jena-3.14.0/lib-src/jena-shacl-3.14.0-sources.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/Setups/MSc/apache-jena-3.14.0/lib-src/jena-tdb-3.14.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
