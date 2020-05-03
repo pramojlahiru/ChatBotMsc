@@ -15,6 +15,16 @@ public class QueryRepo {
                     "?symptom covid19details:symptom_name ?name. " +
                     "}";
 
+    final static String FETCH_PRECAUTIONS =
+            "prefix covid19details: <http://covid19details.rdf#>" +
+                    "    SELECT ?name" +
+                    "            WHERE" +
+                    "    {" +
+                    "?precaution covid19details:precaution_name ?name." +
+                    "    }";
+
+
+
 
 
 }

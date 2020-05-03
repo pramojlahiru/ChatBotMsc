@@ -111,4 +111,7 @@
 <category><pattern>HI</pattern>
 <template><srai>HELLO</srai></template>
 </category>
+<category><pattern>WHAT * PRECAUTIONS *</pattern>
+<template>Precautions of the covid19 is getCovid19Precautions()</template>
+</category>
 </aiml>

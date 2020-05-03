@@ -15,7 +15,7 @@ public class QueryRunner {
     public static String runSparqlQuery (String queryStr, String literal) {
 
         FileManager.get().addLocatorClassLoader(QueryRunner.class.getClassLoader());
-        Model model = FileManager.get().loadModel("/Users/pramoj/Desktop/covid19details.rdf");
+        Model model = FileManager.get().loadModel("src/resources/bots/pramoj/ontology/covid19details.rdf");
 
         Query query = QueryFactory.create(queryStr);
         QueryExecution qexec = QueryExecutionFactory.create(query, model);

@@ -1,0 +1,537 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://covid19details.rdf#"
+     xml:base="http://covid19details.rdf"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:covid19details="http://covid19details.rdf#">
+    <owl:Ontology rdf:about="http://covid19details.rdf"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://covid19details.rdf#exist -->
+
+    <owl:ObjectProperty rdf:about="http://covid19details.rdf#exist">
+        <rdfs:domain rdf:resource="http://covid19details.rdf#Symptom"/>
+        <rdfs:range rdf:resource="http://covid19details.rdf#People"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://covid19details.rdf#followed -->
+
+    <owl:ObjectProperty rdf:about="http://covid19details.rdf#followed">
+        <rdfs:domain rdf:resource="http://covid19details.rdf#Precaution"/>
+        <rdfs:range rdf:resource="http://covid19details.rdf#People"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://covid19details.rdf#lives -->
+
+    <owl:ObjectProperty rdf:about="http://covid19details.rdf#lives">
+        <rdfs:domain rdf:resource="http://covid19details.rdf#People"/>
+        <rdfs:range rdf:resource="http://covid19details.rdf#District"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://covid19details.rdf#locates -->
+
+    <owl:ObjectProperty rdf:about="http://covid19details.rdf#locates">
+        <rdfs:domain rdf:resource="http://covid19details.rdf#Hospital"/>
+        <rdfs:range rdf:resource="http://covid19details.rdf#District"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://covid19details.rdf#testing -->
+
+    <owl:ObjectProperty rdf:about="http://covid19details.rdf#testing">
+        <rdfs:domain rdf:resource="http://covid19details.rdf#People"/>
+        <rdfs:range rdf:resource="http://covid19details.rdf#PcrTest"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://covid19details.rdf#treat -->
+
+    <owl:ObjectProperty rdf:about="http://covid19details.rdf#treat">
+        <rdfs:domain rdf:resource="http://covid19details.rdf#Patient"/>
+        <rdfs:range rdf:resource="http://covid19details.rdf#Hospital"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://covid19details.rdf#district_id -->
+
+    <owl:DatatypeProperty rdf:about="http://covid19details.rdf#district_id">
+        <rdfs:domain rdf:resource="http://covid19details.rdf#District"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://covid19details.rdf#district_name -->
+
+    <owl:DatatypeProperty rdf:about="http://covid19details.rdf#district_name">
+        <rdfs:domain rdf:resource="http://covid19details.rdf#District"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://covid19details.rdf#hospital_id -->
+
+    <owl:DatatypeProperty rdf:about="http://covid19details.rdf#hospital_id">
+        <rdfs:domain rdf:resource="http://covid19details.rdf#Hospital"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://covid19details.rdf#hospital_name -->
+
+    <owl:DatatypeProperty rdf:about="http://covid19details.rdf#hospital_name">
+        <rdfs:domain rdf:resource="http://covid19details.rdf#Hospital"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://covid19details.rdf#patient_id -->
+
+    <owl:DatatypeProperty rdf:about="http://covid19details.rdf#patient_id">
+        <rdfs:domain rdf:resource="http://covid19details.rdf#Patient"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://covid19details.rdf#patient_name -->
+
+    <owl:DatatypeProperty rdf:about="http://covid19details.rdf#patient_name">
+        <rdfs:domain rdf:resource="http://covid19details.rdf#Patient"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://covid19details.rdf#precaution_id -->
+
+    <owl:DatatypeProperty rdf:about="http://covid19details.rdf#precaution_id">
+        <rdfs:domain rdf:resource="http://covid19details.rdf#Precaution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://covid19details.rdf#precaution_name -->
+
+    <owl:DatatypeProperty rdf:about="http://covid19details.rdf#precaution_name">
+        <rdfs:domain rdf:resource="http://covid19details.rdf#Precaution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://covid19details.rdf#symptom_id -->
+
+    <owl:DatatypeProperty rdf:about="http://covid19details.rdf#symptom_id">
+        <rdfs:domain rdf:resource="http://covid19details.rdf#Symptom"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://covid19details.rdf#symptom_name -->
+
+    <owl:DatatypeProperty rdf:about="http://covid19details.rdf#symptom_name">
+        <rdfs:domain rdf:resource="http://covid19details.rdf#Symptom"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://covid19details.rdf#test_id -->
+
+    <owl:DatatypeProperty rdf:about="http://covid19details.rdf#test_id">
+        <rdfs:domain rdf:resource="http://covid19details.rdf#PcrTest"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://covid19details.rdf#District -->
+
+    <owl:Class rdf:about="http://covid19details.rdf#District"/>
+    
+
+
+    <!-- http://covid19details.rdf#Hospital -->
+
+    <owl:Class rdf:about="http://covid19details.rdf#Hospital"/>
+    
+
+
+    <!-- http://covid19details.rdf#NonPatient -->
+
+    <owl:Class rdf:about="http://covid19details.rdf#NonPatient">
+        <rdfs:subClassOf rdf:resource="http://covid19details.rdf#People"/>
+        <owl:disjointWith rdf:resource="http://covid19details.rdf#Patient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://covid19details.rdf#Patient -->
+
+    <owl:Class rdf:about="http://covid19details.rdf#Patient">
+        <rdfs:subClassOf rdf:resource="http://covid19details.rdf#People"/>
+    </owl:Class>
+    
+
+
+    <!-- http://covid19details.rdf#PcrTest -->
+
+    <owl:Class rdf:about="http://covid19details.rdf#PcrTest"/>
+    
+
+
+    <!-- http://covid19details.rdf#People -->
+
+    <owl:Class rdf:about="http://covid19details.rdf#People"/>
+    
+
+
+    <!-- http://covid19details.rdf#Precaution -->
+
+    <owl:Class rdf:about="http://covid19details.rdf#Precaution"/>
+    
+
+
+    <!-- http://covid19details.rdf#Symptom -->
+
+    <owl:Class rdf:about="http://covid19details.rdf#Symptom"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://covid19details.rdf#District-Anuradhapura -->
+
+    <owl:NamedIndividual rdf:about="http://covid19details.rdf#District-Anuradhapura">
+        <rdf:type rdf:resource="http://covid19details.rdf#District"/>
+        <district_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">04</district_id>
+        <district_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anuradhapura</district_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://covid19details.rdf#District-Colombo -->
+
+    <owl:NamedIndividual rdf:about="http://covid19details.rdf#District-Colombo">
+        <rdf:type rdf:resource="http://covid19details.rdf#District"/>
+        <district_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">01</district_id>
+        <district_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Colombo</district_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://covid19details.rdf#District-Galle -->
+
+    <owl:NamedIndividual rdf:about="http://covid19details.rdf#District-Galle">
+        <rdf:type rdf:resource="http://covid19details.rdf#District"/>
+        <district_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">03</district_id>
+        <district_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Galle</district_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://covid19details.rdf#District-Gampaha -->
+
+    <owl:NamedIndividual rdf:about="http://covid19details.rdf#District-Gampaha">
+        <rdf:type rdf:resource="http://covid19details.rdf#District"/>
+        <district_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">02</district_id>
+        <district_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gampaha</district_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://covid19details.rdf#District-Jaffna -->
+
+    <owl:NamedIndividual rdf:about="http://covid19details.rdf#District-Jaffna">
+        <rdf:type rdf:resource="http://covid19details.rdf#District"/>
+        <district_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">05</district_id>
+        <district_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jaffna</district_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://covid19details.rdf#Hospital-Col_Gen -->
+
+    <owl:NamedIndividual rdf:about="http://covid19details.rdf#Hospital-Col_Gen">
+        <rdf:type rdf:resource="http://covid19details.rdf#Hospital"/>
+        <locates rdf:resource="http://covid19details.rdf#District-Colombo"/>
+        <hospital_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">001</hospital_id>
+        <hospital_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">National Hospital Sri Lanka</hospital_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://covid19details.rdf#Hospital-NIID -->
+
+    <owl:NamedIndividual rdf:about="http://covid19details.rdf#Hospital-NIID">
+        <rdf:type rdf:resource="http://covid19details.rdf#Hospital"/>
+        <locates rdf:resource="http://covid19details.rdf#District-Colombo"/>
+        <hospital_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">02</hospital_id>
+        <hospital_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">National Institute of Infectious Diseases</hospital_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://covid19details.rdf#Hospital-TH_Anurad -->
+
+    <owl:NamedIndividual rdf:about="http://covid19details.rdf#Hospital-TH_Anurad">
+        <rdf:type rdf:resource="http://covid19details.rdf#Hospital"/>
+        <locates rdf:resource="http://covid19details.rdf#District-Anuradhapura"/>
+        <hospital_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">05</hospital_id>
+        <hospital_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TH - Anuradhapura</hospital_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://covid19details.rdf#Hospital-TH_Jaffna -->
+
+    <owl:NamedIndividual rdf:about="http://covid19details.rdf#Hospital-TH_Jaffna">
+        <rdf:type rdf:resource="http://covid19details.rdf#Hospital"/>
+        <locates rdf:resource="http://covid19details.rdf#District-Jaffna"/>
+        <hospital_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">06</hospital_id>
+        <hospital_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TH- Jaffna</hospital_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://covid19details.rdf#Hospital-TH_Karapitiya -->
+
+    <owl:NamedIndividual rdf:about="http://covid19details.rdf#Hospital-TH_Karapitiya">
+        <rdf:type rdf:resource="http://covid19details.rdf#Hospital"/>
+        <locates rdf:resource="http://covid19details.rdf#District-Galle"/>
+        <hospital_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">04</hospital_id>
+        <hospital_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TH - Karapitiya</hospital_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://covid19details.rdf#Hospital-TH_Ragama -->
+
+    <owl:NamedIndividual rdf:about="http://covid19details.rdf#Hospital-TH_Ragama">
+        <rdf:type rdf:resource="http://covid19details.rdf#Hospital"/>
+        <locates rdf:resource="http://covid19details.rdf#District-Colombo"/>
+        <hospital_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">03</hospital_id>
+        <hospital_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TH - Ragama</hospital_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://covid19details.rdf#PCR-01 -->
+
+    <owl:NamedIndividual rdf:about="http://covid19details.rdf#PCR-01">
+        <rdf:type rdf:resource="http://covid19details.rdf#PcrTest"/>
+        <testing rdf:resource="http://covid19details.rdf#Patient-Kasun"/>
+        <test_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">01</test_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://covid19details.rdf#PCR-02 -->
+
+    <owl:NamedIndividual rdf:about="http://covid19details.rdf#PCR-02">
+        <rdf:type rdf:resource="http://covid19details.rdf#PcrTest"/>
+        <testing rdf:resource="http://covid19details.rdf#Patient-Isuri"/>
+        <test_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">02</test_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://covid19details.rdf#PCR-03 -->
+
+    <owl:NamedIndividual rdf:about="http://covid19details.rdf#PCR-03">
+        <rdf:type rdf:resource="http://covid19details.rdf#PcrTest"/>
+        <testing rdf:resource="http://covid19details.rdf#Patient-Mani"/>
+        <test_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">03</test_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://covid19details.rdf#Patient-Isuri -->
+
+    <owl:NamedIndividual rdf:about="http://covid19details.rdf#Patient-Isuri">
+        <rdf:type rdf:resource="http://covid19details.rdf#Patient"/>
+        <exist rdf:resource="http://covid19details.rdf#Symptom-01"/>
+        <exist rdf:resource="http://covid19details.rdf#Symptom-03"/>
+        <followed rdf:resource="http://covid19details.rdf#Precaution-01"/>
+        <followed rdf:resource="http://covid19details.rdf#Precaution-02"/>
+        <lives rdf:resource="http://covid19details.rdf#District-Galle"/>
+        <treat rdf:resource="http://covid19details.rdf#Hospital-TH_Karapitiya"/>
+        <patient_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">02</patient_id>
+        <patient_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Isuri</patient_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://covid19details.rdf#Patient-Kasun -->
+
+    <owl:NamedIndividual rdf:about="http://covid19details.rdf#Patient-Kasun">
+        <rdf:type rdf:resource="http://covid19details.rdf#Patient"/>
+        <exist rdf:resource="http://covid19details.rdf#Symptom-01"/>
+        <exist rdf:resource="http://covid19details.rdf#Symptom-02"/>
+        <lives rdf:resource="http://covid19details.rdf#District-Colombo"/>
+        <treat rdf:resource="http://covid19details.rdf#Hospital-NIID"/>
+        <patient_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">01</patient_id>
+        <patient_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kasun</patient_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://covid19details.rdf#Patient-Mani -->
+
+    <owl:NamedIndividual rdf:about="http://covid19details.rdf#Patient-Mani">
+        <rdf:type rdf:resource="http://covid19details.rdf#Patient"/>
+        <followed rdf:resource="http://covid19details.rdf#Precaution-01"/>
+        <followed rdf:resource="http://covid19details.rdf#Precaution-03"/>
+        <lives rdf:resource="http://covid19details.rdf#District-Jaffna"/>
+        <treat rdf:resource="http://covid19details.rdf#Hospital-TH_Jaffna"/>
+        <patient_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">03</patient_id>
+        <patient_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mani</patient_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://covid19details.rdf#Precaution-01 -->
+
+    <owl:NamedIndividual rdf:about="http://covid19details.rdf#Precaution-01">
+        <rdf:type rdf:resource="http://covid19details.rdf#Precaution"/>
+        <precaution_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">01</precaution_id>
+        <precaution_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ware mask</precaution_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://covid19details.rdf#Precaution-02 -->
+
+    <owl:NamedIndividual rdf:about="http://covid19details.rdf#Precaution-02">
+        <rdf:type rdf:resource="http://covid19details.rdf#Precaution"/>
+        <precaution_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">02</precaution_id>
+        <precaution_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maintaining Social Distance</precaution_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://covid19details.rdf#Precaution-03 -->
+
+    <owl:NamedIndividual rdf:about="http://covid19details.rdf#Precaution-03">
+        <rdf:type rdf:resource="http://covid19details.rdf#Precaution"/>
+        <precaution_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">03</precaution_id>
+        <precaution_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></precaution_name>
+        <precaution_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">If you have any symptoms, seek medical assistance immediately</precaution_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://covid19details.rdf#Symptom-01 -->
+
+    <owl:NamedIndividual rdf:about="http://covid19details.rdf#Symptom-01">
+        <rdf:type rdf:resource="http://covid19details.rdf#Symptom"/>
+        <symptom_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">01</symptom_id>
+        <symptom_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dry Cough</symptom_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://covid19details.rdf#Symptom-02 -->
+
+    <owl:NamedIndividual rdf:about="http://covid19details.rdf#Symptom-02">
+        <rdf:type rdf:resource="http://covid19details.rdf#Symptom"/>
+        <symptom_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">02</symptom_id>
+        <symptom_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Feaver</symptom_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://covid19details.rdf#Symptom-03 -->
+
+    <owl:NamedIndividual rdf:about="http://covid19details.rdf#Symptom-03">
+        <rdf:type rdf:resource="http://covid19details.rdf#Symptom"/>
+        <symptom_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">03</symptom_id>
+        <symptom_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tiredness</symptom_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://covid19details.rdf#Symptom-04 -->
+
+    <owl:NamedIndividual rdf:about="http://covid19details.rdf#Symptom-04">
+        <rdf:type rdf:resource="http://covid19details.rdf#Symptom"/>
+        <symptom_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">04</symptom_id>
+        <symptom_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sore Throat</symptom_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://covid19details.rdf#Symptom-05 -->
+
+    <owl:NamedIndividual rdf:about="http://covid19details.rdf#Symptom-05">
+        <rdf:type rdf:resource="http://covid19details.rdf#Symptom"/>
+        <symptom_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">05</symptom_id>
+        <symptom_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Runny Nose / Nasal Conjession</symptom_name>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
