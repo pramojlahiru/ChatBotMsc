@@ -12,7 +12,7 @@ import org.apache.jena.util.FileManager;
 
 public class QueryRunner {
 
-    public static String runSparqlQuery (String queryStr, String literal) {
+    public static String runSparqlQuery(String queryStr, String literal, boolean isCount) {
 
         FileManager.get().addLocatorClassLoader(QueryRunner.class.getClassLoader());
         Model model = FileManager.get().loadModel("src/resources/bots/pramoj/ontology/covid19details.rdf");
@@ -25,11 +25,15 @@ public class QueryRunner {
         try {
             ResultSet results = qexec.execSelect();
 
+            Integer count = 0;
             while (results.hasNext()) {
                 QuerySolution soln = results.nextSolution();
                 Literal name = soln.getLiteral(literal);
-//                System.out.println(name);
-                finalResult += name + ", ";
+                finalResult += name + (results.hasNext() ? ", " : "");
+                count ++;
+            }
+            if (isCount) {
+                finalResult = count.toString();
             }
         } finally {
             qexec.close();

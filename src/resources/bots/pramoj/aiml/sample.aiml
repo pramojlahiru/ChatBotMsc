@@ -105,13 +105,31 @@
             I am sad!
          </condition></template>
 </category>
-<category><pattern>WHAT * SYMPTOMS *</pattern>
-<template>Symptoms of the covid19 is getCovid19Symptoms()</template>
-</category>
-<category><pattern>HI</pattern>
+<category><pattern>HI ^</pattern>
 <template><srai>HELLO</srai></template>
 </category>
-<category><pattern>WHAT * PRECAUTIONS *</pattern>
-<template>Precautions of the covid19 is getCovid19Precautions()</template>
+<category><pattern>WHAT ^ SYMPTOMS ^</pattern>
+<template>Symptoms of the covid19 is getCovid19Symptoms().</template>
+</category>
+<category><pattern>WHAT ^ PRECAUTIONS ^</pattern>
+<template>Precautions of the covid19 is getCovid19Precautions().</template>
+</category>
+<category><pattern>WHO ^ PATIENTS ^</pattern>
+<template>Current patient(s) are getAllPatients().</template>
+</category>
+<category><pattern>WHAT ^ PATIENT COUNT ^</pattern>
+<template>Current COVID19 patient count is getAllPatients().</template>
+</category>
+<category><pattern>WHAT ^ HOSPITALS ^</pattern>
+<template>getAllHospitals() hospitals are treating COVID19 patients currently.</template>
+</category>
+<category><pattern>WHAT ^ HOSPITAL COUNT ^</pattern>
+<template>getAllHospitals() hospitals currently treating COVID19 patients.</template>
+</category>
+<category><pattern>WHAT ^ DISTRICTS ^</pattern>
+<template>Clusters reported in getCovidDistricts() districts.</template>
+</category>
+<category><pattern>WHAT ^ DISTRICT COUNT ^</pattern>
+<template>getCovidDistricts() districts has been reported as affected districts.</template>
 </category>
 </aiml>
