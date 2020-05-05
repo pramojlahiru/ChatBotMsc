@@ -126,10 +126,16 @@
 <category><pattern>WHAT ^ HOSPITAL COUNT ^</pattern>
 <template>getAllHospitals() hospitals currently treating COVID19 patients.</template>
 </category>
+<category><pattern>HOW MANY ^ HOSPITAL ^</pattern>
+<template>getAllHospitals() hospitals currently treating COVID19 patients.</template>
+</category>
 <category><pattern>WHAT ^ DISTRICTS ^</pattern>
 <template>Clusters reported in getCovidDistricts() districts.</template>
 </category>
 <category><pattern>WHAT ^ DISTRICT COUNT ^</pattern>
+<template>getCovidDistricts() districts has been reported as affected districts.</template>
+</category>
+<category><pattern>HOW MANY ^ DISTRICT ^</pattern>
 <template>getCovidDistricts() districts has been reported as affected districts.</template>
 </category>
 </aiml>
